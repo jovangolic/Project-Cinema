@@ -13,7 +13,7 @@ Project-Cinema is java full-stack web aplication that alows the users to reserve
 - USE cinema_db;
 - After application is run, also in MySQL Workbench add these lines of codes:
 - this is for creating the roles.
-- by deafault, when you create an account, your role is ROLE_USER. You can change it directly in code or by using method in postman.
+- by default, when you create an account, your role is ROLE_USER. You can change it directly in code or by using method in postman.
 - insert into role(name) values("ROLE_ADMIN");
 - insert into role(name) values("ROLE_USER");
 - this is for creating the types of projections
