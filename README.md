@@ -4,7 +4,7 @@
 Project-Cinema is java full-stack web aplication that alows the users to reserved, cancel or purcahse the ticket/tickets for movie. The application is built using Java for the backend and React+Vite for the frontend. 
 
 ## Notes
-- This application isn't finished yet. It's in working progress.
+- There is an error in BoughtTicketsForm,BoughtTicketsSummary.
 - Also, alter column description in movie_coming_soon table. Instead of column type String, set up to Text.
 - e.g. ALTER TABLE cinema_db.movies_coming_soon modify column description TEXT;
 - Before you run application, first, you need to create database. In MySQL Workbench, type this: 
@@ -12,12 +12,15 @@ Project-Cinema is java full-stack web aplication that alows the users to reserve
 - CREATE SCHEMA cinema_db DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 - USE cinema_db;
 - After application is run, also in MySQL Workbench add these lines of codes:
+- this is for creating the roles.
+- by deafault, when you create an account, your role is ROLE_USER. You can change it directly in code or by using method in postman.
 - insert into role(name) values("ROLE_ADMIN");
 - insert into role(name) values("ROLE_USER");
+- this is for creating the types of projections
 - insert into projection_type(name) values("2D");
 - insert into projection_type(name) values("3D");
 - insert into projection_type(name) values("4D");
-- these lines of codes are for testing only.
+- this is for inserting rows in one hall and their seats
 - insert into hall(name) values("hall-1");
 - insert into seat(seat_number, hall_id, available) values(1,1,true);
 - insert into seat(seat_number, hall_id, available) values(2,1,true);
@@ -75,14 +78,16 @@ git clone https://github.com/jovangolic/CinemaApplication.git
 cd CinemaApp
 
 ### Frontend setup
+- This is very IMPORTANT!!! Use Visual Studio Code, and in terminal type these lines of codes.
 - npm create vite@latest
-- input name of the project
+- input name of the project (chose name)
 - choose React+Vite
 - choose javascript
 - how to run:
 - cd name-of-the-project
 - npm install
 - npm run dev
+- after you type npm run dev, after few second do this -> control + click on the link, and application will be opened in you default browser.
 
 ### Author
 - Jovan Golic
