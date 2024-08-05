@@ -33,7 +33,7 @@ Project-Cinema is java full-stack web aplication that alows the users to reserve
 - insert into seat(seat_number, hall_id, available) values(9,1,true);
 - insert into seat(seat_number, hall_id, available) values(10,1,true);
 - Also, you can add more halls and more seats. That's up to you.
-
+- In package.json in fronted part of application, jwt-decode is this version: "jwt-decode": "^3.1.2"
 
 ## Features
 
